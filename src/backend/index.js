@@ -1,6 +1,15 @@
-const {ipcMain} = require("electron");
+const { ipcMain } = require("electron");
 
-ipcMain.on("blabla", (event, dados)=>{
-    console.log(dados)
-    event.reply("blabla", "respondido")
+const pathToRows = require("./pathsToRows")
+
+ipcMain.on("process-subtitles", (event, paths) => {
+    console.log(paths);
+    pathToRows(paths)
+        .then(rows => console.log(rows))
+        .then(() => { })
+    event.reply("process-subtitles", [
+        { word: "i", amount: 547 },
+        { word: "you", amount: 547 },
+        { word: "flow", amount: 547 }
+    ])
 })
