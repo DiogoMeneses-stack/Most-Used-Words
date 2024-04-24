@@ -1,23 +1,24 @@
 <template>
   <v-app>
     <v-main>
-      <v-app-bar app color="primary">
-        <v-toolbar-title>Most Used Words</v-toolbar-title>
+      <v-app-bar app color="secondary">
+        <v-toolbar-title>
+          Most Used Words
+        </v-toolbar-title>
       </v-app-bar>
-      <HomePage />
+      <HomePage/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HomePage from './components/HomePage.vue'
+import HomePage from "./components/HomePage";
 
 export default {
   name: 'App',
 
   components: {
-    HomePage
-
+   HomePage
   },
 
   data: () => ({

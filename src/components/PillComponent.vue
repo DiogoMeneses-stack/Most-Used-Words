@@ -6,15 +6,15 @@
 </template>
 
 <script>
-export default {
+export default{
     props:["word", "amount"]
 }
 </script>
 
-<style>
+<style scoped>
 
 .pill{
-    margin: 10px;
+    margin:10px;
     height: 55px;
     width: fit-content;
     border-radius: 35px;
@@ -22,7 +22,7 @@ export default {
     font-size: 1.3rem;
     font-weight: bold;
     display: flex;
-    align-items: enter;
+    align-items: center;
     background-color: red;
 }
 
@@ -41,6 +41,6 @@ export default {
     font-size: 14px;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
 </style>
